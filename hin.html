@@ -37,6 +37,7 @@ body {
   padding: 30px;
   text-align: center;
   color: white;
+  height: fit-content;
 }
 
 .avatar {
@@ -46,6 +47,7 @@ body {
   border: 5px solid white;
   object-fit: cover;
   margin-bottom: 15px;
+  background-color: #fff; /* Hiển thị nền trắng nếu mạng chậm chưa load được ảnh */
 }
 
 .name {
@@ -112,7 +114,7 @@ body {
 <div class="container">
 
   <div class="left">
-    <img src="Avatar.jpg" class="avatar">
+    <img src="https://raw.githubusercontent.com/dinhhien09061405-maker/dinhhien.github.io/main/Avatar.jpg" class="avatar" alt="Avatar của Hiền">
     <div class="name">Đinh Thị Hiền</div>
   </div>
 
@@ -126,7 +128,7 @@ body {
 
     <div class="card">
       <h3><i class="fa fa-graduation-cap"></i> Học vấn</h3>
-      <p>⭐ GPA: 9.5</p>
+      <p>⭐ GPA 12: 9.5</p>
       <p>🏫 ĐH Ngoại Thương</p>
     </div>
 
@@ -148,13 +150,6 @@ body {
         <div class="bar"><span style="width:85%"></span></div>
       </div>
 
-    </div>
-
-    <div class="card">
-      <h3><i class="fa fa-heart"></i> Tính cách</h3>
-      <p>✔ Trách nhiệm</p>
-      <p>✔ Cầu tiến</p>
-      <p>✔ Sáng tạo</p>
     </div>
 
     <div class="card contact">
