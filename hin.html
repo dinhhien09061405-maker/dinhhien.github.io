@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đinh Thị Hiền Portfolio</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#fdfcfb,#e2d1c3);
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+/* PROFILE */
+.profile{
+    text-align:center;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:white;
+}
+
+.avatar{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-bottom:10px;
+}
+
+.name{
+    font-size:22px;
+    font-weight:600;
+}
+
+/* TITLE */
+.title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+    color:#ff7a3d;
+    font-weight:600;
+}
+
+.title i{
+    font-size:18px;
+}
+
+/* LIST */
+ul{
+    list-style:none;
+}
+
+li{
+    margin-bottom:8px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+/* SKILL */
+.skill{
+    margin-top:10px;
+}
+
+.bar{
+    height:8px;
+    background:#eee;
+    border-radius:10px;
+    margin-top:5px;
+    overflow:hidden;
+}
+
+.bar div{
+    height:100%;
+    background:linear-gradient(90deg,#ff9a9e,#fad0c4);
+    animation:load 2s;
+}
+
+@keyframes load{
+    from{width:0;}
+}
+
+/* CONTACT */
+.contact a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:10px;
+    text-decoration:none;
+    color:#333;
+    padding:10px;
+    border-radius:10px;
+    background:#f7f7f7;
+    transition:0.3s;
+}
+
+.contact a:hover{
+    background:#ff9a9e;
+    color:white;
+    transform:translateX(5px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT -->
+    <div>
+
+        <!-- PROFILE -->
+        <div class="card profile">
+            <!-- FIX AVATAR -->
+            <img src="Avatar.jpg" class="avatar">
+            <div class="name">Đinh Thị Hiền</div>
+        </div>
+
+        <!-- SKILL -->
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-star"></i> KỸ NĂNG</div>
+
+            <div class="skill">
+                Giao tiếp
+                <div class="bar"><div style="width:85%"></div></div>
+            </div>
+
+            <div class="skill">
+                Thuyết trình
+                <div class="bar"><div style="width:80%"></div></div>
+            </div>
+
+            <div class="skill">
+                Làm việc nhóm
+                <div class="bar"><div style="width:85%"></div></div>
+            </div>
+
+            <div class="skill">
+                Sáng tạo
+                <div class="bar"><div style="width:90%"></div></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-user"></i> GIỚI THIỆU</div>
+            <ul>
+                <li><i class="fa-solid fa-cake-candles"></i> 14/05/2006</li>
+                <li><i class="fa-solid fa-location-dot"></i> Mỹ Hào, Hưng Yên</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-graduation-cap"></i> HỌC VẤN</div>
+            <ul>
+                <li><i class="fa-solid fa-star"></i> GPA: 9.5</li>
+                <li><i class="fa-solid fa-school"></i> ĐH Ngoại Thương</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-heart"></i> TÍNH CÁCH</div>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> Trách nhiệm</li>
+                <li><i class="fa-solid fa-check"></i> Cầu tiến</li>
+                <li><i class="fa-solid fa-check"></i> Sáng tạo</li>
+                <li><i class="fa-solid fa-check"></i> Kỷ luật</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-briefcase"></i> KINH NGHIỆM</div>
+            <ul>
+                <li><i class="fa-solid fa-chart-line"></i> Marketing - HSA</li>
+                <li><i class="fa-solid fa-cart-shopping"></i> Sale - HSA</li>
+            </ul>
+        </div>
+
+        <div class="card contact">
+            <div class="title"><i class="fa-solid fa-phone"></i> LIÊN HỆ</div>
+
+            <a href="tel:0969820714">
+                <i class="fa-solid fa-phone"></i> 0969820714
+            </a>
+
+            <a href="mailto:dinhhien09061405@gmail.com">
+                <i class="fa-solid fa-envelope"></i> dinhhien09061405@gmail.com
+            </a>
+
+            <a href="https://www.facebook.com/inhhien.180941?locale=vi_VN" target="_blank">
+                <i class="fa-brands fa-facebook"></i> Facebook của Hiền
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
