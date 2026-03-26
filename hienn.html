@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đinh Thị Hiền - Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#fbe4d8,#f3c7b6);
+}
+
+/* CONTAINER */
+.container{
+    width:1000px;
+    margin:40px auto;
+    display:flex;
+    gap:20px;
+}
+
+/* LEFT */
+.left{
+    width:35%;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* RIGHT */
+.right{
+    width:65%;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* AVATAR */
+.avatar-box{
+    text-align:center;
+    background:#c58b6b;
+    color:white;
+}
+
+.avatar{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-bottom:10px;
+    transition:0.4s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.avatar:hover{
+    transform:scale(1.1) rotate(5deg);
+}
+
+.name{
+    font-size:22px;
+    font-weight:600;
+}
+
+/* TITLE */
+h3{
+    margin-bottom:10px;
+    color:#8b4513;
+}
+
+/* LIST */
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:5px;
+}
+
+/* SKILL */
+.skill p{
+    margin-top:10px;
+}
+
+.bar{
+    height:8px;
+    background:#eee;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.bar div{
+    height:100%;
+    background:#ffb38a;
+    animation:load 2s ease;
+}
+
+@keyframes load{
+    from{width:0;}
+}
+
+/* CONTACT */
+.contact a{
+    display:block;
+    margin-top:8px;
+    text-decoration:none;
+    color:#8b4513;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.contact a:hover{
+    color:#ff7a3d;
+    transform:translateX(5px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <!-- AVATAR -->
+        <div class="card avatar-box">
+            <!-- ✅ AVATAR CHUẨN GITHUB -->
+            <img src="https://raw.githubusercontent.com/dinhhien09061405-maker/dinhhien.github.io/main/Avatar.jpg" class="avatar">
+            <div class="name">Đinh Thị Hiền</div>
+        </div>
+
+        <!-- SKILL -->
+        <div class="card">
+            <h3>KỸ NĂNG</h3>
+
+            <div class="skill">
+                <p>Giao tiếp</p>
+                <div class="bar"><div style="width:85%"></div></div>
+
+                <p>Thuyết trình</p>
+                <div class="bar"><div style="width:80%"></div></div>
+
+                <p>Quản lý thời gian</p>
+                <div class="bar"><div style="width:75%"></div></div>
+
+                <p>Làm việc nhóm</p>
+                <div class="bar"><div style="width:85%"></div></div>
+
+                <p>Sáng tạo</p>
+                <div class="bar"><div style="width:90%"></div></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <div class="card">
+            <h3>GIỚI THIỆU</h3>
+            <ul>
+                <li>Ngày sinh: 14/05/2006</li>
+                <li>Quê quán: Mỹ Hào, Hưng Yên</li>
+            </ul>
+        </div>
+
+        <!-- ✅ HỌC VẤN ĐÃ SỬA -->
+        <div class="card">
+            <h3>HỌC VẤN</h3>
+            <ul>
+                <li>GPA lớp 12: 9.5</li>
+                <li>Sinh viên năm 2 - Trường Đại học Ngoại Thương</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>TÍNH CÁCH</h3>
+            <ul>
+                <li>Có trách nhiệm</li>
+                <li>Tinh thần cầu tiến</li>
+                <li>Chăm chỉ, sáng tạo</li>
+                <li>Kỷ luật cao</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>KINH NGHIỆM</h3>
+            <ul>
+                <li>Marketing - HSA EDUCATION</li>
+                <li>Sale - HSA EDUCATION</li>
+            </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="card contact">
+            <h3>LIÊN HỆ</h3>
+
+            <a href="tel:0969820714">📞 0969820714</a>
+
+            <a href="mailto:dinhhien09061405@gmail.com">
+                📧 dinhhien09061405@gmail.com
+            </a>
+
+            <a href="https://www.facebook.com/inhhien.180941?locale=vi_VN" target="_blank">
+                🌐 Facebook của Hiền
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
