@@ -30,7 +30,9 @@ body {
   gap: 20px;
 }
 
-/* LEFT */
+/* =========================================
+   LEFT SIDEBAR (Khối bên trái)
+   ========================================= */
 .left {
   background: linear-gradient(180deg, #ff9a9e, #fad0c4);
   border-radius: 20px;
@@ -38,7 +40,26 @@ body {
   text-align: center;
   color: white;
   height: fit-content;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Đổ bóng nhẹ ban đầu */
+  
+  /* --- BẮT ĐẦU PHẦN HIỆU ỨNG --- */
+  transition: all 0.3s ease; /* Tạo chuyển động mượt mà cho mọi thay đổi */
+  cursor: pointer; /* Biến con trỏ chuột thành hình bàn tay khi rê vào */
 }
+
+/* 1. Hiệu ứng khi Rê chuột vào khối bên trái */
+.left:hover {
+  transform: translateY(-8px); /* Nhấc khối lên cao 8px */
+  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2); /* Bóng đổ đậm và rộng hơn, màu hồng nhẹ */
+}
+
+/* 2. Hiệu ứng khi Ấn giữ chuột vào khối bên trái */
+.left:active {
+  transform: translateY(-2px) scale(0.98); /* Hạ xuống một chút và thu nhỏ 2% */
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* Bóng đổ xẹp xuống */
+}
+/* --- KẾT THÚC PHẦN HIỆU ỨNG --- */
+
 
 .avatar {
   width: 140px;
@@ -47,7 +68,13 @@ body {
   border: 5px solid white;
   object-fit: cover;
   margin-bottom: 15px;
-  background-color: #fff; 
+  background-color: #fff;
+  transition: transform 0.5s ease; /* Hiệu ứng riêng cho ảnh */
+}
+
+/* Hiệu ứng xoay nhẹ ảnh đại diện khi rê chuột vào khối lớn */
+.left:hover .avatar {
+    transform: rotate(5deg);
 }
 
 .name {
@@ -55,14 +82,39 @@ body {
   font-weight: 600;
 }
 
-/* CARD */
+/* =========================================
+   RIGHT CONTENT (Các khối bên phải)
+   ========================================= */
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
 .card {
   background: white;
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Đổ bóng nhẹ ban đầu */
+  
+  /* --- BẮT ĐẦU PHẦN HIỆU ỨNG --- */
+  transition: all 0.3s ease; /* Tạo chuyển động mượt mà */
+  cursor: pointer; /* Biến con trỏ chuột thành hình bàn tay */
 }
+
+/* 1. Hiệu ứng khi Rê chuột vào các khối bên phải */
+.card:hover {
+  transform: translateY(-5px); /* Nhấc khối lên cao 5px */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12); /* Bóng đổ đậm hơn */
+}
+
+/* 2. Hiệu ứng khi Ấn giữ chuột vào các khối bên phải */
+.card:active {
+  transform: translateY(-1px) scale(0.99); /* Hạ xuống và thu nhỏ 1% */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng đổ xẹp xuống */
+}
+/* --- KẾT THÚC PHẦN HIỆU ỨNG --- */
+
 
 .card h3 {
   margin-bottom: 10px;
@@ -73,7 +125,7 @@ body {
   margin-right: 8px;
 }
 
-/* SKILL */
+/* SKILL BAR */
 .skill {
   margin-bottom: 10px;
 }
@@ -91,13 +143,7 @@ body {
   background: #ff6b6b;
 }
 
-/* RIGHT */
-.right {
-  display: flex;
-  flex-direction: column;
-}
-
-/* LINK */
+/* CONTACT LINK */
 .contact a {
   text-decoration: none;
   color: #333;
@@ -105,6 +151,7 @@ body {
 
 .contact a:hover {
   color: #ff6b6b;
+  text-decoration: underline; /* Thêm gạch chân khi rê vào link */
 }
 </style>
 </head>
