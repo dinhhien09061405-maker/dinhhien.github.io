@@ -2,156 +2,104 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Hiền</title>
+<title>Portfolio - Đinh Thị Hiền</title>
 
+<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+<!-- Icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
 }
 
-body {
-  background: linear-gradient(135deg, #f8d7d0, #f5eee6);
-  padding: 30px;
+body{
+    background: linear-gradient(135deg,#f8cfc7,#fbe4de);
+    padding:30px;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 20px;
+.container{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
 }
 
-/* =========================================
-   LEFT SIDEBAR (Khối bên trái)
-   ========================================= */
-.left {
-  background: linear-gradient(180deg, #ff9a9e, #fad0c4);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-  color: white;
-  height: fit-content;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Đổ bóng nhẹ ban đầu */
-  
-  /* --- BẮT ĐẦU PHẦN HIỆU ỨNG --- */
-  transition: all 0.3s ease; /* Tạo chuyển động mượt mà cho mọi thay đổi */
-  cursor: pointer; /* Biến con trỏ chuột thành hình bàn tay khi rê vào */
+/* CARD */
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-5px);
 }
 
-/* 1. Hiệu ứng khi Rê chuột vào khối bên trái */
-.left:hover {
-  transform: translateY(-8px); /* Nhấc khối lên cao 8px */
-  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2); /* Bóng đổ đậm và rộng hơn, màu hồng nhẹ */
+/* PROFILE */
+.profile{
+    text-align:center;
+    background: linear-gradient(135deg,#f08a7d,#f7b2a7);
+    color:white;
 }
 
-/* 2. Hiệu ứng khi Ấn giữ chuột vào khối bên trái */
-.left:active {
-  transform: translateY(-2px) scale(0.98); /* Hạ xuống một chút và thu nhỏ 2% */
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* Bóng đổ xẹp xuống */
-}
-/* --- KẾT THÚC PHẦN HIỆU ỨNG --- */
-
-
-.avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 5px solid white;
-  object-fit: cover;
-  margin-bottom: 15px;
-  background-color: #fff;
-  transition: transform 0.5s ease; /* Hiệu ứng riêng cho ảnh */
+.avatar{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-bottom:10px;
 }
 
-/* Hiệu ứng xoay nhẹ ảnh đại diện khi rê chuột vào khối lớn */
-.left:hover .avatar {
-    transform: rotate(5deg);
-}
-
-.name {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-/* =========================================
-   RIGHT CONTENT (Các khối bên phải)
-   ========================================= */
-.right {
-  display: flex;
-  flex-direction: column;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Đổ bóng nhẹ ban đầu */
-  
-  /* --- BẮT ĐẦU PHẦN HIỆU ỨNG --- */
-  transition: all 0.3s ease; /* Tạo chuyển động mượt mà */
-  cursor: pointer; /* Biến con trỏ chuột thành hình bàn tay */
-}
-
-/* 1. Hiệu ứng khi Rê chuột vào các khối bên phải */
-.card:hover {
-  transform: translateY(-5px); /* Nhấc khối lên cao 5px */
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12); /* Bóng đổ đậm hơn */
-}
-
-/* 2. Hiệu ứng khi Ấn giữ chuột vào các khối bên phải */
-.card:active {
-  transform: translateY(-1px) scale(0.99); /* Hạ xuống và thu nhỏ 1% */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng đổ xẹp xuống */
-}
-/* --- KẾT THÚC PHẦN HIỆU ỨNG --- */
-
-
-.card h3 {
-  margin-bottom: 10px;
-  color: #ff6b6b;
-}
-
-.card i {
-  margin-right: 8px;
+/* TITLE */
+.title{
+    font-weight:600;
+    margin-bottom:10px;
+    color:#ff6b4a;
 }
 
 /* SKILL BAR */
-.skill {
-  margin-bottom: 10px;
+.skill{
+    margin:10px 0;
+}
+.bar{
+    background:#eee;
+    border-radius:10px;
+    overflow:hidden;
+}
+.bar div{
+    height:8px;
+    background:#ff6b4a;
 }
 
-.bar {
-  height: 8px;
-  background: #eee;
-  border-radius: 10px;
-  overflow: hidden;
+/* LIST */
+ul{
+    padding-left:20px;
 }
 
-.bar span {
-  display: block;
-  height: 100%;
-  background: #ff6b6b;
+/* CONTACT */
+.contact a{
+    text-decoration:none;
+    color:#333;
+}
+.contact i{
+    color:#ff6b4a;
+    margin-right:8px;
 }
 
-/* CONTACT LINK */
-.contact a {
-  text-decoration: none;
-  color: #333;
-}
-
-.contact a:hover {
-  color: #ff6b6b;
-  text-decoration: underline; /* Thêm gạch chân khi rê vào link */
+/* RESPONSIVE */
+@media(max-width:768px){
+    .container{
+        grid-template-columns:1fr;
+    }
 }
 </style>
 </head>
@@ -160,58 +108,102 @@ body {
 
 <div class="container">
 
-  <div class="left">
-    <img src="https://raw.githubusercontent.com/dinhhien09061405-maker/dinhhien.github.io/main/Avatar.jpg" class="avatar" alt="Avatar">
-    <div class="name">Đinh Thị Hiền</div>
-  </div>
+    <!-- LEFT -->
+    <div>
 
-  <div class="right">
+        <!-- PROFILE -->
+        <div class="card profile">
+            <img src="Avatar.jpg" class="avatar">
+            <h2>Đinh Thị Hiền</h2>
+        </div>
 
-    <div class="card">
-      <h3><i class="fa fa-user"></i> Giới thiệu</h3>
-      <p>📅 14/05/2006</p>
-      <p>📍 Mỹ Hào, Hưng Yên</p>
-    </div>
+        <!-- SKILLS -->
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-star"></i> KỸ NĂNG</div>
 
-    <div class="card">
-      <h3><i class="fa fa-graduation-cap"></i> Học vấn</h3>
-      <p>⭐ GPA 12: 9.5</p>
-      <p>🏫 ĐH Ngoại Thương</p>
-    </div>
+            <div class="skill">Giao tiếp
+                <div class="bar"><div style="width:90%"></div></div>
+            </div>
 
-    <div class="card">
-      <h3><i class="fa fa-star"></i> Kỹ năng</h3>
+            <div class="skill">Thuyết trình
+                <div class="bar"><div style="width:85%"></div></div>
+            </div>
 
-      <div class="skill">
-        Giao tiếp
-        <div class="bar"><span style="width:90%"></span></div>
-      </div>
+            <div class="skill">Làm việc nhóm
+                <div class="bar"><div style="width:88%"></div></div>
+            </div>
 
-      <div class="skill">
-        Thuyết trình
-        <div class="bar"><span style="width:80%"></span></div>
-      </div>
+            <div class="skill">Sáng tạo
+                <div class="bar"><div style="width:92%"></div></div>
+            </div>
 
-      <div class="skill">
-        Làm việc nhóm
-        <div class="bar"><span style="width:85%"></span></div>
-      </div>
+        </div>
 
     </div>
 
-    <div class="card contact">
-      <h3><i class="fa fa-phone"></i> Liên hệ</h3>
-      <p>📞 0969820714</p>
-      <p>📧 dinhhien09061405@gmail.com</p>
-      <p>
-        <i class="fab fa-facebook"></i>
-        <a href="https://www.facebook.com/inhhien.180941" target="_blank">
-          Facebook của tôi
-        </a>
-      </p>
-    </div>
+    <!-- RIGHT -->
+    <div>
 
-  </div>
+        <!-- GIỚI THIỆU -->
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-user"></i> GIỚI THIỆU</div>
+            <p><i class="fa-solid fa-cake-candles"></i> 14/05/2006</p>
+            <p><i class="fa-solid fa-location-dot"></i> Mỹ Hào, Hưng Yên</p>
+        </div>
+
+        <!-- HỌC VẤN -->
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-graduation-cap"></i> HỌC VẤN</div>
+            <p><i class="fa-solid fa-star"></i> GPA lớp 12: 9.5</p>
+            <p><i class="fa-solid fa-school"></i> Sinh viên năm 2 - ĐH Ngoại Thương</p>
+        </div>
+
+        <!-- TÍNH CÁCH -->
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-heart"></i> TÍNH CÁCH</div>
+            <ul>
+                <li>Trách nhiệm</li>
+                <li>Cầu tiến</li>
+                <li>Sáng tạo</li>
+                <li>Kỷ luật</li>
+            </ul>
+        </div>
+
+        <!-- KINH NGHIỆM -->
+        <div class="card">
+            <div class="title"><i class="fa-solid fa-briefcase"></i> KINH NGHIỆM</div>
+            <ul>
+                <li>Marketing tại HSA EDUCATION</li>
+                <li>Sale tại HSA EDUCATION</li>
+            </ul>
+        </div>
+
+        <!-- LIÊN HỆ -->
+        <div class="card contact">
+            <div class="title"><i class="fa-solid fa-address-book"></i> LIÊN HỆ</div>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                0969820714
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:dinhhien09061405@gmail.com">
+                    dinhhien09061405@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/inhhien.180941" target="_blank">
+                    Facebook của tôi
+                </a>
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
