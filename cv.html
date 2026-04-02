@@ -20,7 +20,6 @@ body{
     padding:30px;
 }
 
-/* HEADER */
 .header{
     text-align:center;
     margin-bottom:30px;
@@ -47,7 +46,6 @@ body{
     color:#fff;
 }
 
-/* GRID */
 .container{
     max-width:1100px;
     margin:auto;
@@ -56,7 +54,6 @@ body{
     gap:20px;
 }
 
-/* CARD */
 .card{
     background:linear-gradient(135deg,#ffffff,#fff5f5);
     padding:18px;
@@ -71,7 +68,6 @@ body{
     box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
-/* TITLE */
 .title{
     font-weight:600;
     margin-bottom:10px;
@@ -82,13 +78,12 @@ body{
     margin-right:8px;
 }
 
-/* LIST */
 ul{
     padding-left:18px;
 }
 
 li{
-    margin-bottom:6px;
+    margin-bottom:8px;
 }
 
 /* SKILL */
@@ -110,12 +105,21 @@ li{
     border-radius:10px;
 }
 
+/* LINK STYLE */
+.card a{
+    text-decoration:none;
+    color:#ff4d6d;
+    font-weight:500;
+}
+
+.card a:hover{
+    text-decoration:underline;
+}
+
 /* CONTACT */
 .contact a{
     display:block;
     margin-top:8px;
-    text-decoration:none;
-    color:#333;
     padding:8px;
     border-radius:10px;
     transition:0.3s;
@@ -132,16 +136,13 @@ li{
 
 <body>
 
-<!-- HEADER -->
 <div class="header">
     <img src="https://raw.githubusercontent.com/dinhhien09061405-maker/dinhhien.github.io/main/033306006355_anh.jpg" class="avatar">
     <div class="name">Đinh Thị Hiền</div>
 </div>
 
-<!-- GRID -->
 <div class="container">
 
-    <!-- GIỚI THIỆU -->
     <div class="card">
         <div class="title"><i class="fa fa-user"></i> Giới thiệu</div>
         <ul>
@@ -150,51 +151,42 @@ li{
         </ul>
     </div>
 
-    <!-- HỌC VẤN -->
     <div class="card">
         <div class="title"><i class="fa fa-graduation-cap"></i> Học vấn</div>
         <ul>
-          <li>Sinh viên năm 2 - ĐH Ngoại Thương</li>
-            <li>GPA:3.55</li>
+            <li>Sinh viên năm 2 - ĐH Ngoại Thương</li>
+            <li>GPA: 3.55</li>
         </ul>
     </div>
 
-    <!-- KỸ NĂNG FULL -->
     <div class="card">
         <div class="title"><i class="fa fa-star"></i> Kỹ năng</div>
 
-        <div class="skill">
-            Giao tiếp
+        <div class="skill">Giao tiếp
             <div class="bar"><div style="width:90%"></div></div>
         </div>
 
-        <div class="skill">
-            Thuyết trình
+        <div class="skill">Thuyết trình
             <div class="bar"><div style="width:85%"></div></div>
         </div>
 
-        <div class="skill">
-            Quản lý thời gian
+        <div class="skill">Quản lý thời gian
             <div class="bar"><div style="width:80%"></div></div>
         </div>
 
-        <div class="skill">
-            Làm việc nhóm
+        <div class="skill">Làm việc nhóm
             <div class="bar"><div style="width:88%"></div></div>
         </div>
 
-        <div class="skill">
-            Tư duy sáng tạo
+        <div class="skill">Tư duy sáng tạo
             <div class="bar"><div style="width:92%"></div></div>
         </div>
-       <div class="skill">
-            Thành thạo sử dụng Excel, Word,..
+
+        <div class="skill">Excel, Word
             <div class="bar"><div style="width:80%"></div></div>
         </div>
-
     </div>
 
-    <!-- TÍNH CÁCH -->
     <div class="card">
         <div class="title"><i class="fa fa-heart"></i> Tính cách</div>
         <ul>
@@ -209,14 +201,22 @@ li{
     <div class="card">
         <div class="title"><i class="fa fa-briefcase"></i> Kinh nghiệm</div>
         <ul>
-            <li>Admin group tại HSA EDUCATION</li>
-            <li>Admin fanpage tại HSA EDUCATION</li>
-            <li>Xây dựng TikTok ĐGNL SP tại PEDA EDU</li>
+            <li>
+                <a href="https://www.facebook.com/groups/onthi.bocongan.dgnl" target="_blank">
+                    <i class="fab fa-facebook"></i> Admin group tại HSA EDUCATION
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.tiktok.com/@sptwithhinn?_r=1&_t=ZS-95Bv6juc3Pz" target="_blank">
+                    <i class="fab fa-tiktok"></i> Xây dựng TikTok ĐGNL SP tại PEDA EDU
+                </a>
+            </li>
+
             <li>Sales khóa học tại HSA EDUCATION</li>
         </ul>
     </div>
 
-    <!-- CONTACT -->
     <div class="card contact">
         <div class="title"><i class="fa fa-phone"></i> Liên hệ</div>
 
